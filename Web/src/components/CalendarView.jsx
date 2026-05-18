@@ -124,25 +124,6 @@ function CalendarView({ todos, onToggleTodo }) {
           );
         })}
       </div>
-
-      <div className="calendar-unscheduled">
-        <h3>List of Tasks</h3>
-
-        {otherTodos.length === 0 && (
-          <p className="calendar-empty">No other tasks.</p>
-        )}
-
-        {otherTodos.map((todo) => (
-          <div className="calendar-other-task" key={todo.id}>
-            <div>
-              <strong>{todo.title}</strong>
-              <p>Due: {formatDate(todo.dueDate)}</p>
-            </div>
-
-            <span>{todo.completed ? "Completed" : "In Progress"}</span>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }
